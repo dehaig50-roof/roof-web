@@ -5,51 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dennis Haigler Roofing | Laurel, MS - Trusted for Over 40 Years</title>
     <meta name="description" content="Dennis Haigler Roofing serves Laurel, MS with honest roofing services. Over 40 years of experience. Free inspections. No pressure, just honest advice.">
-    
-    <!-- Google Fonts -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <style>
         /* ============================================
-           CSS VARIABLES - Easy Color Customization
-           ============================================ */
+           CSS VARIABLES
+        ============================================ */
         :root {
-            /* Main Brand Colors */
             --primary-blue: #1e40af;
             --primary-blue-dark: #1e3a8a;
             --primary-blue-light: #3b82f6;
-            
             --secondary-slate: #334155;
             --secondary-slate-light: #475569;
-            
             --accent-green: #10b981;
             --accent-green-dark: #059669;
-            
-            /* Neutral Colors */
             --white: #ffffff;
             --gray-50: #f9fafb;
             --gray-100: #f3f4f6;
             --gray-200: #e5e7eb;
             --gray-300: #d1d5db;
+            --gray-500: #6b7280;
             --gray-600: #4b5563;
             --gray-700: #374151;
             --gray-900: #111827;
-            
-            /* Typography */
             --font-display: 'Fraunces', serif;
             --font-body: 'Public Sans', sans-serif;
         }
 
         /* ============================================
-           RESET & BASE STYLES
-           ============================================ */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+           RESET & BASE
+        ============================================ */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: var(--font-body);
@@ -60,8 +49,8 @@
         }
 
         /* ============================================
-           HERO SECTION
-           ============================================ */
+           HERO
+        ============================================ */
         .hero {
             background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #3b82f6 100%);
             color: var(--white);
@@ -71,16 +60,11 @@
             overflow: hidden;
         }
 
-        /* Decorative background pattern */
         .hero::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: 
-                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.03) 35px, rgba(255,255,255,.03) 70px);
+            inset: 0;
+            background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.03) 35px, rgba(255,255,255,.03) 70px);
             opacity: 0.5;
         }
 
@@ -89,6 +73,7 @@
             margin: 0 auto;
             position: relative;
             z-index: 1;
+            animation: fadeInUp 0.8s ease-out;
         }
 
         .hero h1 {
@@ -108,9 +93,6 @@
             letter-spacing: -0.01em;
         }
 
-        /* ============================================
-           CALL & TEXT BUTTONS
-           ============================================ */
         .contact-buttons {
             display: flex;
             gap: 16px;
@@ -133,7 +115,7 @@
             flex: 1;
             min-width: 200px;
             justify-content: center;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.2);
             border: 3px solid transparent;
         }
 
@@ -145,7 +127,7 @@
 
         .btn-call:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
             background-color: var(--gray-50);
         }
 
@@ -158,12 +140,10 @@
         .btn-text:hover {
             background-color: var(--accent-green-dark);
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+            box-shadow: 0 8px 20px rgba(16,185,129,0.4);
         }
 
-        .btn-icon {
-            font-size: 24px;
-        }
+        .btn-icon { font-size: 24px; }
 
         .phone-subtext {
             font-size: 1rem;
@@ -175,15 +155,12 @@
             color: var(--white);
             text-decoration: none;
             font-weight: 600;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            border-bottom: 2px solid rgba(255,255,255,0.3);
             transition: border-color 0.2s;
         }
 
-        .phone-subtext a:hover {
-            border-bottom-color: var(--white);
-        }
+        .phone-subtext a:hover { border-bottom-color: var(--white); }
 
-        /* Trust badges */
         .trust-badges {
             display: flex;
             gap: 24px;
@@ -201,13 +178,11 @@
             opacity: 0.95;
         }
 
-        .trust-badge-icon {
-            font-size: 20px;
-        }
+        .trust-badge-icon { font-size: 20px; }
 
         /* ============================================
-           ABOUT SECTION
-           ============================================ */
+           ABOUT
+        ============================================ */
         .about {
             padding: 80px 20px;
             background-color: var(--gray-50);
@@ -236,16 +211,6 @@
             align-items: start;
         }
 
-        /* 
-        ============================================
-        IMAGE PLACEHOLDER - LEFT SIDE
-        ============================================
-        TO ADD YOUR PHOTO OF DENNIS:
-        1. Save your image file in the same folder as this HTML file
-        2. Name it: dennis-photo.jpg (or .png)
-        3. Uncomment the line below by removing the double slashes //
-        4. The image will automatically appear!
-        */
         .about-image {
             background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
             border-radius: 16px;
@@ -256,9 +221,8 @@
             color: var(--gray-600);
             font-weight: 600;
             font-size: 1.1rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            /* Uncomment the line below and add your image filename */
-             background-image: url('dennis-photo.png'); 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background-image: url('dennis-photo.png');
             background-size: cover;
             background-position: center;
         }
@@ -278,19 +242,15 @@
             color: var(--gray-700);
         }
 
-        .about-text strong {
-            color: var(--primary-blue);
-            font-weight: 700;
-        }
+        .about-text strong { color: var(--primary-blue); font-weight: 700; }
 
-        /* Dennis Quote Box */
         .owner-quote {
             background: var(--white);
             border-left: 5px solid var(--primary-blue);
             padding: 28px;
             margin-top: 32px;
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
         .owner-quote p {
@@ -309,8 +269,8 @@
         }
 
         /* ============================================
-           SERVICES SECTION
-           ============================================ */
+           SERVICES
+        ============================================ */
         .services {
             padding: 80px 20px;
             background: var(--white);
@@ -334,19 +294,21 @@
             border-radius: 12px;
             border: 2px solid var(--gray-200);
             transition: all 0.3s ease;
+            animation: fadeInUp 0.6s ease-out backwards;
         }
+
+        .service-card:nth-child(1) { animation-delay: 0.1s; }
+        .service-card:nth-child(2) { animation-delay: 0.2s; }
+        .service-card:nth-child(3) { animation-delay: 0.3s; }
+        .service-card:nth-child(4) { animation-delay: 0.4s; }
 
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
             border-color: var(--primary-blue);
         }
 
-        .service-icon {
-            font-size: 2.5rem;
-            margin-bottom: 16px;
-            display: block;
-        }
+        .service-icon { font-size: 2.5rem; margin-bottom: 16px; display: block; }
 
         .service-card h3 {
             font-family: var(--font-display);
@@ -356,24 +318,301 @@
             font-weight: 700;
         }
 
-        .service-card p {
-            color: var(--gray-600);
-            line-height: 1.7;
+        .service-card p { color: var(--gray-600); line-height: 1.7; font-size: 1rem; }
+
+        /* ============================================
+           REVIEWS
+        ============================================ */
+        .reviews {
+            padding: 80px 20px;
+            background: var(--gray-50);
+        }
+
+        .reviews-content {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .reviews-meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 8px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .google-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--gray-700);
+        }
+
+        .google-g {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: conic-gradient(#4285F4 0deg 90deg, #34A853 90deg 180deg, #FBBC05 180deg 270deg, #EA4335 270deg 360deg);
+            display: inline-block;
+            flex-shrink: 0;
+        }
+
+        .reviews-stars-summary {
+            display: flex;
+            align-items: center;
+            gap: 6px;
             font-size: 1rem;
+            font-weight: 700;
+            color: var(--gray-900);
+        }
+
+        .stars-row { display: flex; gap: 2px; }
+
+        .star { color: #F59E0B; font-size: 1.15rem; line-height: 1; }
+
+        .review-count-text {
+            color: var(--gray-600);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .view-google-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border-bottom: 2px solid rgba(30,64,175,0.2);
+            transition: border-color 0.2s;
+            margin-top: 6px;
+        }
+
+        .view-google-link:hover { border-bottom-color: var(--primary-blue); }
+
+        .reviews-carousel-wrapper {
+            position: relative;
+            margin-top: 48px;
+            overflow: hidden;
+        }
+
+        .reviews-track {
+            display: flex;
+            gap: 24px;
+            transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: transform;
+        }
+
+        .review-card {
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: 12px;
+            padding: 28px 28px 24px;
+            flex: 0 0 calc(33.333% - 16px);
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.10);
+            border-color: var(--primary-blue);
+        }
+
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .reviewer-avatar {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--primary-blue);
+            color: var(--white);
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            letter-spacing: 0.5px;
+        }
+
+        .review-card:nth-child(2) .reviewer-avatar { background: #059669; }
+        .review-card:nth-child(3) .reviewer-avatar { background: #334155; }
+        .review-card:nth-child(4) .reviewer-avatar { background: #7c3aed; }
+        .review-card:nth-child(5) .reviewer-avatar { background: #b45309; }
+
+        .reviewer-info { flex: 1; min-width: 0; }
+
+        .reviewer-name {
+            font-weight: 700;
+            color: var(--gray-900);
+            font-size: 1rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .review-date {
+            font-size: 0.85rem;
+            color: var(--gray-600);
+            margin-top: 2px;
+        }
+
+        .review-stars { display: flex; gap: 3px; }
+
+        .review-text {
+            font-size: 0.98rem;
+            line-height: 1.78;
+            color: var(--gray-700);
+            flex: 1;
+        }
+
+        .review-text.clamped {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .read-more-btn {
+            background: none;
+            border: none;
+            padding: 0;
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 0.88rem;
+            cursor: pointer;
+            font-family: var(--font-body);
+            margin-top: -6px;
+            display: none;
+            text-align: left;
+        }
+
+        .read-more-btn:hover { text-decoration: underline; }
+
+        .card-google-mark {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: auto;
+            padding-top: 12px;
+            border-top: 1px solid var(--gray-200);
+            font-size: 0.8rem;
+            color: var(--gray-500);
+            font-weight: 500;
+        }
+
+        .card-google-dot {
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: conic-gradient(#4285F4 0deg 90deg, #34A853 90deg 180deg, #FBBC05 180deg 270deg, #EA4335 270deg 360deg);
+            display: inline-block;
+            flex-shrink: 0;
+        }
+
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            margin-top: 32px;
+        }
+
+        .carousel-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 2px solid var(--gray-300);
+            background: var(--white);
+            color: var(--gray-700);
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            line-height: 1;
+        }
+
+        .carousel-btn:hover:not(:disabled) {
+            border-color: var(--primary-blue);
+            color: var(--primary-blue);
+            background: var(--gray-50);
+        }
+
+        .carousel-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+        .carousel-dots { display: flex; gap: 8px; align-items: center; }
+
+        .carousel-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--gray-300);
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+            border: none;
+            padding: 0;
+        }
+
+        .carousel-dot.active {
+            background: var(--primary-blue);
+            transform: scale(1.35);
+        }
+
+        .reviews-cta {
+            text-align: center;
+            margin-top: 48px;
+            padding: 44px 32px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 55%, #3b82f6 100%);
+            border-radius: 12px;
+            color: var(--white);
+        }
+
+        .reviews-cta h3 {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .reviews-cta p { font-size: 1rem; opacity: 0.9; margin-bottom: 28px; }
+
+        .reviews-cta .btn-call {
+            background: var(--white);
+            color: var(--primary-blue);
+            border-color: var(--white);
         }
 
         /* ============================================
-           PROCESS SECTION
-           ============================================ */
+           PROCESS
+        ============================================ */
         .process {
             padding: 80px 20px;
             background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
         }
 
-        .process-content {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
+        .process-content { max-width: 1100px; margin: 0 auto; }
 
         .process-list {
             max-width: 800px;
@@ -381,14 +620,10 @@
             background: var(--white);
             padding: 48px;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
-        .process-list ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+        .process-list ul { list-style: none; padding: 0; margin: 0; }
 
         .process-list li {
             font-size: 1.15rem;
@@ -399,9 +634,7 @@
             border-bottom: 1px solid var(--gray-200);
         }
 
-        .process-list li:last-child {
-            border-bottom: none;
-        }
+        .process-list li:last-child { border-bottom: none; }
 
         .process-list li::before {
             content: '✓';
@@ -421,8 +654,8 @@
         }
 
         /* ============================================
-           CONTACT FORM SECTION
-           ============================================ */
+           CONTACT FORM
+        ============================================ */
         .contact-form-section {
             padding: 80px 20px;
             background: var(--white);
@@ -441,7 +674,6 @@
             line-height: 1.7;
         }
 
-        /* Alternative Contact Methods */
         .alt-contact {
             background: var(--gray-50);
             padding: 32px;
@@ -466,18 +698,14 @@
             flex-wrap: wrap;
         }
 
-        .alt-contact .btn {
-            min-width: 180px;
-        }
+        .alt-contact .btn { min-width: 180px; }
 
         .alt-contact .btn-call {
             background-color: var(--primary-blue);
             color: var(--white);
         }
 
-        .alt-contact .btn-call:hover {
-            background-color: var(--primary-blue-dark);
-        }
+        .alt-contact .btn-call:hover { background-color: var(--primary-blue-dark); }
 
         .form-divider {
             text-align: center;
@@ -487,17 +715,14 @@
             font-size: 1rem;
         }
 
-        /* Form Styles */
         .contact-form {
             background: var(--gray-50);
             padding: 32px;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+        .form-group { margin-bottom: 20px; }
 
         .form-group label {
             display: block;
@@ -525,17 +750,11 @@
         .form-group textarea:focus {
             outline: none;
             border-color: var(--primary-blue);
-            box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+            box-shadow: 0 0 0 3px rgba(30,64,175,0.1);
         }
 
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .form-group select {
-            cursor: pointer;
-        }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        .form-group select { cursor: pointer; }
 
         .submit-btn {
             width: 100%;
@@ -554,7 +773,7 @@
         .submit-btn:hover {
             background: var(--primary-blue-dark);
             transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(30, 64, 175, 0.3);
+            box-shadow: 0 6px 16px rgba(30,64,175,0.3);
         }
 
         .form-footer {
@@ -565,16 +784,13 @@
         }
 
         /* ============================================
-           THANK YOU MODAL/SECTION (Hidden by default)
-           ============================================ */
+           THANK YOU MODAL
+        ============================================ */
         .thankyou-overlay {
             display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.8);
+            inset: 0;
+            background: rgba(0,0,0,0.8);
             z-index: 9998;
             animation: fadeIn 0.3s ease-out;
         }
@@ -590,32 +806,24 @@
             width: 90%;
             padding: 60px 40px;
             border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
             text-align: center;
             z-index: 9999;
             animation: slideUp 0.5s ease-out;
         }
 
-        .thankyou-modal.show,
-        .thankyou-overlay.show {
-            display: block;
-        }
+        .thankyou-modal.show, .thankyou-overlay.show { display: block; }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translate(-50%, -40%);
-            }
-            to {
-                opacity: 1;
-                transform: translate(-50%, -50%);
-            }
+            from { opacity: 0; transform: translate(-50%, -40%); }
+            to { opacity: 1; transform: translate(-50%, -50%); }
         }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes scaleIn { from { transform: scale(0); } to { transform: scale(1); } }
 
         .checkmark {
             width: 80px;
@@ -627,11 +835,6 @@
             align-items: center;
             justify-content: center;
             animation: scaleIn 0.5s ease-out 0.3s backwards;
-        }
-
-        @keyframes scaleIn {
-            from { transform: scale(0); }
-            to { transform: scale(1); }
         }
 
         .checkmark::before {
@@ -672,11 +875,7 @@
             font-weight: 700;
         }
 
-        .thankyou-info p {
-            color: var(--gray-700);
-            line-height: 1.7;
-            margin-bottom: 10px;
-        }
+        .thankyou-info p { color: var(--gray-700); line-height: 1.7; margin-bottom: 10px; }
 
         .close-modal {
             display: inline-block;
@@ -688,13 +887,11 @@
             transition: all 0.3s;
         }
 
-        .close-modal:hover {
-            text-decoration: underline;
-        }
+        .close-modal:hover { text-decoration: underline; }
 
         /* ============================================
            FOOTER
-           ============================================ */
+        ============================================ */
         .footer {
             background: var(--secondary-slate);
             color: var(--white);
@@ -702,10 +899,7 @@
             text-align: center;
         }
 
-        .footer-content {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
+        .footer-content { max-width: 1100px; margin: 0 auto; }
 
         .footer h3 {
             font-family: var(--font-display);
@@ -714,10 +908,7 @@
             font-weight: 700;
         }
 
-        .footer p {
-            opacity: 0.9;
-            margin-bottom: 8px;
-        }
+        .footer p { opacity: 0.9; margin-bottom: 8px; }
 
         .footer-phone {
             font-size: 1.5rem;
@@ -730,235 +921,87 @@
             transition: border-color 0.3s;
         }
 
-        .footer-phone:hover {
-            border-bottom-color: var(--white);
-        }
+        .footer-phone:hover { border-bottom-color: var(--white); }
 
-        .service-areas {
-            margin-top: 24px;
-            font-size: 0.95rem;
-            opacity: 0.85;
-        }
+        .service-areas { margin-top: 24px; font-size: 0.95rem; opacity: 0.85; }
 
         /* ============================================
-           RESPONSIVE DESIGN
-           ============================================ */
+           RESPONSIVE
+        ============================================ */
+        @media (max-width: 900px) {
+            .review-card { flex: 0 0 calc(50% - 12px); }
+        }
+
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
+            .hero h1 { font-size: 2.2rem; }
+            .hero-tagline { font-size: 1.2rem; }
+            .contact-buttons { flex-direction: column; max-width: 320px; }
+            .btn { width: 100%; min-width: auto; }
+            .about-grid { grid-template-columns: 1fr; gap: 32px; }
+            .about-image { height: 350px; order: 2; }
+            .about-text { order: 1; }
+            .section-title { font-size: 2rem; }
+            .contact-form { padding: 28px; }
+            .trust-badges { gap: 16px; }
+            .trust-badge { font-size: 0.85rem; }
+            .process-list { padding: 32px 24px; }
+            .process-list li { font-size: 1.05rem; padding: 14px 0 14px 44px; }
+            .thankyou-modal { padding: 40px 24px; }
+            .thankyou-modal h2 { font-size: 2rem; }
+            .reviews-cta { padding: 32px 20px; }
+            .reviews-cta h3 { font-size: 1.4rem; }
+        }
 
-            .hero-tagline {
-                font-size: 1.2rem;
-            }
-
-            .contact-buttons {
-                flex-direction: column;
-                max-width: 320px;
-            }
-
-            .btn {
-                width: 100%;
-                min-width: auto;
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-
-            .about-image {
-                height: 350px;
-                order: 2;
-            }
-
-            .about-text {
-                order: 1;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .contact-form {
-                padding: 28px;
-            }
-
-            .trust-badges {
-                gap: 16px;
-            }
-
-            .trust-badge {
-                font-size: 0.85rem;
-            }
-
-            .process-list {
-                padding: 32px 24px;
-            }
-
-            .process-list li {
-                font-size: 1.05rem;
-                padding: 14px 0 14px 44px;
-            }
-
-            .process-list li::before {
-                width: 28px;
-                height: 28px;
-                font-size: 0.9rem;
-            }
-
-            .thankyou-modal {
-                padding: 40px 24px;
-            }
-
-            .thankyou-modal h2 {
-                font-size: 2rem;
-            }
+        @media (max-width: 580px) {
+            .review-card { flex: 0 0 100%; }
         }
 
         @media (max-width: 480px) {
-            .hero {
-                padding: 40px 20px 60px;
-            }
-
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .hero-tagline {
-                font-size: 1.1rem;
-            }
-
-            .btn {
-                padding: 16px 28px;
-                font-size: 16px;
-            }
-
-            .section-title {
-                font-size: 1.75rem;
-            }
-
-            .about,
-            .services,
-            .process,
-            .contact-form-section {
-                padding: 60px 20px;
-            }
+            .hero { padding: 40px 20px 60px; }
+            .hero h1 { font-size: 1.8rem; }
+            .hero-tagline { font-size: 1.1rem; }
+            .btn { padding: 16px 28px; font-size: 16px; }
+            .section-title { font-size: 1.75rem; }
+            .about, .services, .process, .contact-form-section, .reviews { padding: 60px 20px; }
         }
-
-        /* ============================================
-           ANIMATIONS
-           ============================================ */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero-content {
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        .service-card {
-            animation: fadeInUp 0.6s ease-out backwards;
-        }
-
-        .service-card:nth-child(1) { animation-delay: 0.1s; }
-        .service-card:nth-child(2) { animation-delay: 0.2s; }
-        .service-card:nth-child(3) { animation-delay: 0.3s; }
-        .service-card:nth-child(4) { animation-delay: 0.4s; }
     </style>
 </head>
 <body>
 
-    <!-- ============================================
-         HERO SECTION
-         ============================================ -->
+    <!-- HERO -->
     <section class="hero">
         <div class="hero-content">
             <h1>Dennis Haigler Roofing</h1>
             <p class="hero-tagline">Clear Answers. Reliable Work. No Surprises.</p>
-            
-            <!-- Call & Text Buttons -->
             <div class="contact-buttons">
                 <a href="tel:+16013192522" class="btn btn-call">
-                    <span class="btn-icon">📞</span>
-                    Call Now
+                    <span class="btn-icon">📞</span> Call Now
                 </a>
                 <a href="sms:+16013192522" class="btn btn-text">
-                    <span class="btn-icon">💬</span>
-                    Text Us
+                    <span class="btn-icon">💬</span> Text Us
                 </a>
             </div>
-            
             <p class="phone-subtext">or call <a href="tel:+16013192522">(601) 319-2522</a></p>
-            
-            <!-- Trust Badges -->
             <div class="trust-badges">
-                <div class="trust-badge">
-                    <span class="trust-badge-icon">✓</span>
-                    Fully Insured
-                </div>
-                <div class="trust-badge">
-                    <span class="trust-badge-icon">✓</span>
-                    Locally Owned
-                </div>
-                <div class="trust-badge">
-                    <span class="trust-badge-icon">✓</span>
-                    40+ Years Experience
-                </div>
+                <div class="trust-badge"><span class="trust-badge-icon">✓</span> Fully Insured</div>
+                <div class="trust-badge"><span class="trust-badge-icon">✓</span> Locally Owned</div>
+                <div class="trust-badge"><span class="trust-badge-icon">✓</span> 40+ Years Experience</div>
             </div>
         </div>
     </section>
 
-    <!-- ============================================
-         ABOUT SECTION
-         ============================================ -->
+    <!-- ABOUT -->
     <section class="about">
         <div class="about-content">
             <h2 class="section-title">About Our Company</h2>
-            
             <div class="about-grid">
-                <!-- 
-                ============================================
-                IMAGE PLACEHOLDER - OWNER PHOTO
-                ============================================
-                TO ADD YOUR PHOTO:
-                1. Save your photo in the same folder as this file
-                2. Name it: dennis-photo.jpg (or .png)
-                3. Go to line 318 in the CSS (search for "about-image")
-                4. Uncomment the background-image line
-                5. Replace 'dennis-photo.jpg' with your filename
-                -->
-                <<div class="about-image" aria-label="Dennis Haigler, owner of Dennis Haigler Roofing"></div>
-
-                
+                <div class="about-image" aria-label="Dennis Haigler, owner of Dennis Haigler Roofing"></div>
                 <div class="about-text">
                     <h3>Serving Laurel, Mississippi for Over 40 Years</h3>
-                    <p>
-                        Dennis Haigler Roofing is a locally owned roofing company serving 
-                        Laurel, Mississippi and surrounding communities for 
-                        <strong>over 40 years</strong>.
-                    </p>
-                    <p>
-                        We work with many senior homeowners and understand how important it is 
-                        to feel confident and informed before making any decisions about your home. 
-                        Our approach is simple: explain the situation clearly and let you decide.
-                    </p>
-                    
-                    <!-- Dennis Quote -->
+                    <p>Dennis Haigler Roofing is a locally owned roofing company serving Laurel, Mississippi and surrounding communities for <strong>over 40 years</strong>.</p>
+                    <p>We work with many senior homeowners and understand how important it is to feel confident and informed before making any decisions about your home. Our approach is simple: explain the situation clearly and let you decide.</p>
                     <div class="owner-quote">
-                        <p>
-                            "I've been roofing homes in this area for more than 40 years. 
-                            If your roof doesn't need replacing, I'll tell you that. 
-                            I believe in taking the time to explain things clearly and 
-                            treating homeowners with honesty and respect."
-                        </p>
+                        <p>"I've been roofing homes in this area for more than 40 years. If your roof doesn't need replacing, I'll tell you that. I believe in taking the time to explain things clearly and treating homeowners with honesty and respect."</p>
                         <p class="quote-author">— Dennis Haigler, Owner</p>
                     </div>
                 </div>
@@ -966,60 +1009,177 @@
         </div>
     </section>
 
-    <!-- ============================================
-         SERVICES SECTION
-         ============================================ -->
+    <!-- SERVICES -->
     <section class="services">
         <div class="services-content">
             <h2 class="section-title">Our Services</h2>
-            
             <div class="services-grid">
                 <div class="service-card">
                     <span class="service-icon">🔍</span>
                     <h3>Free Roof Inspections</h3>
-                    <p>
-                        Thorough inspection of your roof with honest assessment. 
-                        We'll tell you if repairs can wait or if immediate action is needed.
-                    </p>
+                    <p>Thorough inspection of your roof with honest assessment. We'll tell you if repairs can wait or if immediate action is needed.</p>
                 </div>
-                
                 <div class="service-card">
                     <span class="service-icon">🔨</span>
                     <h3>Roof Repairs</h3>
-                    <p>
-                        Quality repairs that extend the life of your roof. 
-                        From small leaks to storm damage, we fix it right the first time.
-                    </p>
+                    <p>Quality repairs that extend the life of your roof. From small leaks to storm damage, we fix it right the first time.</p>
                 </div>
-                
                 <div class="service-card">
                     <span class="service-icon">🏠</span>
                     <h3>Roof Replacement</h3>
-                    <p>
-                        Complete roof replacement with quality materials and 
-                        expert installation. We'll explain all your options clearly.
-                    </p>
+                    <p>Complete roof replacement with quality materials and expert installation. We'll explain all your options clearly.</p>
                 </div>
-                
                 <div class="service-card">
                     <span class="service-icon">🚨</span>
                     <h3>Emergency Services</h3>
-                    <p>
-                        Fast response for urgent roofing issues. 
-                        When you have an emergency, we're here to help protect your home.
-                    </p>
+                    <p>Fast response for urgent roofing issues. When you have an emergency, we're here to help protect your home.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ============================================
-         PROCESS SECTION
-         ============================================ -->
+    <!-- REVIEWS -->
+    <section class="reviews">
+        <div class="reviews-content">
+
+            <h2 class="section-title">What Our Customers Say</h2>
+
+            <div class="reviews-meta">
+                <div class="google-badge">
+                    <span class="google-g"></span>
+                    Google Reviews
+                </div>
+                <div class="reviews-stars-summary">
+                    <div class="stars-row">
+                        <span class="star">★</span><span class="star">★</span>
+                        <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                    </div>
+                    <span>5.0</span>
+                    <span class="review-count-text">(6 reviews)</span>
+                </div>
+            </div>
+
+            <div style="text-align:center;">
+                <a href="https://www.google.com/maps/place/Dennis+Haigler+Roofing/@31.6492585,-89.0783976,17z/data=!3m1!4b1!4m6!3m5!1s0x832f2e698c5c9edd:0xbe9e6b83ec299a14!8m2!3d31.649254!4d-89.0758227!16s%2Fg%2F11l2zvh4p_?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="view-google-link">
+                    View all reviews on Google ↗
+                </a>
+            </div>
+
+            <div class="reviews-carousel-wrapper">
+                <div class="reviews-track" id="reviewsTrack" data-total="5">
+
+                    <!-- REVIEW 1: Phyllis Johnson — best for long-term trust story -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">PJ</div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">Phyllis Johnson</div>
+                                <div class="review-date">1 week ago</div>
+                            </div>
+                        </div>
+                        <div class="review-stars">
+                            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                        </div>
+                        <p class="review-text clamped">We recently had our roof replaced by Dennis Haigler, the same man who put on our roof 25 years ago. The old roof survived hurricanes and torrential rains through the years, and we have never had a single problem. We chose to have a new roof because we felt it was time, not because we had issues. He does quality work at a reasonable price. Dennis arrived early one morning with his team and finished the same day. His team was polite, respectful of property and obviously efficient. We also know that should we have a problem, Dennis will be available to back up his work.</p>
+                        <button class="read-more-btn" onclick="toggleReview(this)">Read more</button>
+                        <div class="card-google-mark"><span class="card-google-dot"></span>Posted on Google</div>
+                    </div>
+
+                    <!-- REVIEW 2: Ramona Brown — multiple projects, family referral -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">RB</div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">Ramona Brown</div>
+                                <div class="review-date">2 weeks ago</div>
+                            </div>
+                        </div>
+                        <div class="review-stars">
+                            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                        </div>
+                        <p class="review-text clamped">Dennis has completed several projects for us — a new roof on our home, a flat roof on our patio, and roofs on two separate storage buildings. Each time, we were very impressed with the quality of his work and his professionalism. We were so impressed that we recommended him to our daughter who needed a roof repair. Highly recommend.</p>
+                        <button class="read-more-btn" onclick="toggleReview(this)">Read more</button>
+                        <div class="card-google-mark"><span class="card-google-dot"></span>Posted on Google</div>
+                    </div>
+
+                    <!-- REVIEW 3: Ginger Jones — best price + emergency response -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">GJ</div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">Ginger Jones</div>
+                                <div class="review-date">May 14, 2024</div>
+                            </div>
+                        </div>
+                        <div class="review-stars">
+                            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                        </div>
+                        <p class="review-text clamped">I called around and got prices from different roofers and the price difference was completely insane! Dennis was by far the best price on my new roof. On top of that a limb fell and he came the next day and repaired my roof and cleaned the roof off of all limbs and debris! Highly recommend.</p>
+                        <button class="read-more-btn" onclick="toggleReview(this)">Read more</button>
+                        <div class="card-google-mark"><span class="card-google-dot"></span>Posted on Google</div>
+                    </div>
+
+                    <!-- REVIEW 4: Jay Harrison — character & honesty -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">JH</div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">Jay Harrison</div>
+                                <div class="review-date">Feb 15, 2024</div>
+                            </div>
+                        </div>
+                        <div class="review-stars">
+                            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                        </div>
+                        <p class="review-text clamped">Dennis Haigler Roofing is definitely a five star rating! He is a very honest, Christian man who does excellent work! I have recommended him to several people who have used him also. They were just as impressed and pleased with him as an honest person and his work.</p>
+                        <button class="read-more-btn" onclick="toggleReview(this)">Read more</button>
+                        <div class="card-google-mark"><span class="card-google-dot"></span>Posted on Google</div>
+                    </div>
+
+                    <!-- REVIEW 5: Patricia Hodge — one day, clean crew -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">PH</div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">Patricia Hodge</div>
+                                <div class="review-date">May 14, 2024</div>
+                            </div>
+                        </div>
+                        <div class="review-stars">
+                            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                        </div>
+                        <p class="review-text clamped">I couldn't be happier with my new roof. Looks great! Dennis and his crew completed it in one day and cleaned up everything afterwards. I would recommend Dennis to all my family and friends.</p>
+                        <button class="read-more-btn" onclick="toggleReview(this)">Read more</button>
+                        <div class="card-google-mark"><span class="card-google-dot"></span>Posted on Google</div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <div class="carousel-nav">
+                <button class="carousel-btn" id="prevBtn" onclick="slideReviews(-1)" aria-label="Previous">&#8592;</button>
+                <div class="carousel-dots" id="carouselDots"></div>
+                <button class="carousel-btn" id="nextBtn" onclick="slideReviews(1)" aria-label="Next">&#8594;</button>
+            </div>
+
+            <div class="reviews-cta">
+                <h3>Join Our Happy Customers</h3>
+                <p>Free inspections · No pressure · Honest advice for over 40 years</p>
+                <div class="contact-buttons" style="margin-top:0;">
+                    <a href="tel:+16013192522" class="btn btn-call"><span class="btn-icon">📞</span> Call Now</a>
+                    <a href="sms:+16013192522" class="btn btn-text"><span class="btn-icon">💬</span> Text Us</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROCESS -->
     <section class="process">
         <div class="process-content">
             <h2 class="section-title">What to Expect</h2>
-            
             <div class="process-list">
                 <ul>
                     <li>You call or submit the form at your convenience</li>
@@ -1033,9 +1193,7 @@
         </div>
     </section>
 
-    <!-- ============================================
-         CONTACT FORM SECTION
-         ============================================ -->
+    <!-- CONTACT FORM -->
     <section class="contact-form-section">
         <div class="contact-form-content">
             <h2 class="section-title">Schedule a Free Roof Inspection</h2>
@@ -1043,78 +1201,57 @@
                 You won't be sold to. You'll be informed.<br>
                 No pressure • No obligation • Family members welcome
             </p>
-            
-            <!-- Alternative Contact Methods -->
+
             <div class="alt-contact">
                 <h3>Prefer to Call or Text?</h3>
                 <div class="alt-contact-buttons">
-                    <a href="tel:+16013192522" class="btn btn-call">
-                        <span class="btn-icon">📞</span>
-                        Call Now
-                    </a>
-                    <a href="sms:+16013192522" class="btn btn-text">
-                        <span class="btn-icon">💬</span>
-                        Text Us
-                    </a>
+                    <a href="tel:+16013192522" class="btn btn-call"><span class="btn-icon">📞</span> Call Now</a>
+                    <a href="sms:+16013192522" class="btn btn-text"><span class="btn-icon">💬</span> Text Us</a>
                 </div>
             </div>
-            
+
             <div class="form-divider">— Or Fill Out the Form Below —</div>
-            
-            <!-- 
-            ============================================
-            CONTACT FORM - FORMSUBMIT SETUP
-            ============================================
-            Form is configured to use your FormSubmit endpoint.
-            When submitted, it will show a thank you message on this page.
-            ============================================
-            -->
+
             <form class="contact-form" action="https://formsubmit.co/dehaig50@gmail.com" method="POST">
-                <!-- FormSubmit Configuration -->
                 <input type="hidden" name="_subject" value="New Roof Inspection Request from Website">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_template" value="table">
                 <input type="hidden" name="_next" value="https://haiglerroofing.com/#thankyou">
                 <input type="text" name="_honey" style="display:none">
-                
+
                 <div class="form-group">
                     <label for="name">Your Name *</label>
                     <input type="text" id="name" name="name" required>
                 </div>
-                
                 <div class="form-group">
                     <label for="phone">Phone Number *</label>
                     <input type="tel" id="phone" name="phone" required>
                 </div>
-                
                 <div class="form-group">
                     <label for="best-time">Best Time to Call (optional)</label>
                     <select id="best-time" name="best_time_to_call">
                         <option value="">Select a time...</option>
-                        <option value="Morning (8am-12pm)">Morning (8am-12pm)</option>
-                        <option value="Afternoon (12pm-5pm)">Afternoon (12pm-5pm)</option>
-                        <option value="Evening (5pm-7pm)">Evening (5pm-7pm)</option>
+                        <option value="Morning (8am-12pm)">Morning (8am–12pm)</option>
+                        <option value="Afternoon (12pm-5pm)">Afternoon (12pm–5pm)</option>
+                        <option value="Evening (5pm-7pm)">Evening (5pm–7pm)</option>
                         <option value="Anytime">Anytime</option>
                     </select>
                 </div>
-                
                 <div class="form-group">
                     <label for="email">Email (optional)</label>
                     <input type="email" id="email" name="email">
                 </div>
-                
                 <div class="form-group">
                     <label for="address">Property Address (optional)</label>
                     <input type="text" id="address" name="property_address">
                 </div>
-                
                 <div class="form-group">
                     <label for="message">Questions or Notes (optional)</label>
                     <textarea id="message" name="message" placeholder="Tell us about any concerns with your roof, when the issue started, or any questions you have..."></textarea>
                 </div>
-                
+
                 <button type="submit" class="submit-btn">Request Free Inspection</button>
-                
+
                 <p class="form-footer">
                     * Required fields<br>
                     We respect your privacy and will never share your information.
@@ -1123,88 +1260,142 @@
         </div>
     </section>
 
-    <!-- ============================================
-         THANK YOU MODAL (Shows after form submission)
-         ============================================ -->
+    <!-- THANK YOU MODAL -->
     <div class="thankyou-overlay" id="thankyouOverlay"></div>
     <div class="thankyou-modal" id="thankyouModal">
         <div class="checkmark"></div>
-        
         <h2>Thank You!</h2>
-        
-        <p class="thankyou-message">
-            Your free roof inspection request has been received successfully.
-        </p>
-
+        <p class="thankyou-message">Your free roof inspection request has been received successfully.</p>
         <div class="thankyou-info">
             <h3>What Happens Next?</h3>
             <p><strong>We'll contact you within 24 hours</strong> to schedule your free inspection at a time that works for you.</p>
-            <p>In the meantime, if you have any urgent questions or would like to speak with us right away, feel free to call or text!</p>
+            <p>In the meantime, if you have any urgent questions, feel free to call or text!</p>
         </div>
-
         <div class="contact-buttons">
-            <a href="tel:+16013192522" class="btn btn-call">
-                <span class="btn-icon">📞</span>
-                Call Now
-            </a>
-            <a href="sms:+16013192522" class="btn btn-text">
-                <span class="btn-icon">💬</span>
-                Text Us
-            </a>
+            <a href="tel:+16013192522" class="btn btn-call"><span class="btn-icon">📞</span> Call Now</a>
+            <a href="sms:+16013192522" class="btn btn-text"><span class="btn-icon">💬</span> Text Us</a>
         </div>
-
-        <p style="color: #6b7280; font-size: 1rem; margin-top: 20px;">
-            <strong>Phone:</strong> (601) 319-2522
-        </p>
-
+        <p style="color:#6b7280; font-size:1rem; margin-top:20px;"><strong>Phone:</strong> (601) 319-2522</p>
         <a href="#" class="close-modal" onclick="closeThankYou(); return false;">← Back to Home</a>
     </div>
 
-    <!-- ============================================
-         FOOTER
-         ============================================ -->
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-content">
             <h3>Dennis Haigler Roofing</h3>
             <p>Laurel, Mississippi</p>
             <a href="tel:+16013192522" class="footer-phone">(601) 319-2522</a>
-            <p class="service-areas">
-                Proudly serving Laurel, Ellisville, Soso, Heidelberg, and nearby communities
-            </p>
+            <p class="service-areas">Proudly serving Laurel, Ellisville, Soso, Heidelberg, and nearby communities</p>
         </div>
     </footer>
 
-    <!-- ============================================
-         JAVASCRIPT FOR THANK YOU MODAL
-         ============================================ -->
     <script>
-        // Check if page loaded with #thankyou hash (after form submission redirect)
+        // ---- Thank You Modal ----
         window.addEventListener('load', function() {
-            if (window.location.hash === '#thankyou') {
-                showThankYou();
-            }
+            if (window.location.hash === '#thankyou') showThankYou();
         });
 
         function showThankYou() {
             document.getElementById('thankyouModal').classList.add('show');
             document.getElementById('thankyouOverlay').classList.add('show');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
+            document.body.style.overflow = 'hidden';
         }
 
         function closeThankYou() {
             document.getElementById('thankyouModal').classList.remove('show');
             document.getElementById('thankyouOverlay').classList.remove('show');
-            document.body.style.overflow = ''; // Restore scrolling
-            
-            // Remove hash from URL
+            document.body.style.overflow = '';
             history.pushState("", document.title, window.location.pathname + window.location.search);
-            
-            // Scroll to top
             window.scrollTo(0, 0);
         }
 
-        // Close modal when clicking overlay
         document.getElementById('thankyouOverlay').addEventListener('click', closeThankYou);
+
+        // ---- Reviews Carousel ----
+        (function () {
+            var track    = document.getElementById('reviewsTrack');
+            var prevBtn  = document.getElementById('prevBtn');
+            var nextBtn  = document.getElementById('nextBtn');
+            var dotsWrap = document.getElementById('carouselDots');
+            if (!track) return;
+
+            var currentPage = 0;
+            var perPage     = getPerPage();
+            var total       = parseInt(track.dataset.total, 10);
+            var pageCount   = Math.ceil(total / perPage);
+            var dots        = [];
+
+            function getPerPage() {
+                if (window.innerWidth <= 580) return 1;
+                if (window.innerWidth <= 900) return 2;
+                return 3;
+            }
+
+            function buildDots() {
+                dotsWrap.innerHTML = '';
+                dots = [];
+                for (var i = 0; i < pageCount; i++) {
+                    var d = document.createElement('button');
+                    d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+                    d.setAttribute('aria-label', 'Go to page ' + (i + 1));
+                    (function(idx) { d.addEventListener('click', function() { goTo(idx); }); })(i);
+                    dotsWrap.appendChild(d);
+                    dots.push(d);
+                }
+            }
+
+            function goTo(page) {
+                currentPage = Math.max(0, Math.min(page, pageCount - 1));
+                var cards = track.querySelectorAll('.review-card');
+                if (!cards.length) return;
+                var cardW  = cards[0].offsetWidth;
+                var offset = currentPage * perPage * (cardW + 24);
+                track.style.transform = 'translateX(-' + offset + 'px)';
+                dots.forEach(function(d, i) { d.classList.toggle('active', i === currentPage); });
+                prevBtn.disabled = currentPage === 0;
+                nextBtn.disabled = currentPage >= pageCount - 1;
+                initReadMore();
+            }
+
+            function initReadMore() {
+                track.querySelectorAll('.review-card').forEach(function(card) {
+                    var p   = card.querySelector('.review-text');
+                    var btn = card.querySelector('.read-more-btn');
+                    if (!p || !btn) return;
+                    btn.style.display = p.scrollHeight > p.clientHeight + 4 ? 'inline' : 'none';
+                });
+            }
+
+            var resizeTimer;
+            window.addEventListener('resize', function() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function() {
+                    var newPer = getPerPage();
+                    if (newPer !== perPage) {
+                        perPage     = newPer;
+                        pageCount   = Math.ceil(total / perPage);
+                        currentPage = 0;
+                        buildDots();
+                        goTo(0);
+                    }
+                }, 150);
+            });
+
+            window.slideReviews  = function(dir) { goTo(currentPage + dir); };
+            window.toggleReview  = function(btn) {
+                var p = btn.previousElementSibling;
+                if (p.classList.contains('clamped')) {
+                    p.classList.remove('clamped');
+                    btn.textContent = 'Read less';
+                } else {
+                    p.classList.add('clamped');
+                    btn.textContent = 'Read more';
+                }
+            };
+
+            buildDots();
+            goTo(0);
+        })();
     </script>
 
 </body>
